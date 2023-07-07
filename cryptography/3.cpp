@@ -36,14 +36,23 @@ string encrypt_transposition(string plaintext, int width)
 {
     string encrypted_text = "";
     int height = ceil(static_cast<double>(plaintext.length()) / width);
+    int total_chars = height * width;
+
+    // padding the plaintext with spaces if necessary
+    string padded_text = plaintext;
+    if (padded_text.length() < total_chars)
+    {
+        int padding = total_chars - padded_text.length();
+        padded_text.append(padding, ' ');
+    }
     
+    // performing encryption
     for (int col = 0; col < width; col++)
     {
         for (int row = 0; row < height; row++)
         {
             int index = col + (row * width);
-            if (index < plaintext.length())
-                encrypted_text += plaintext[index];
+            encrypted_text += padded_text[index];
         }
     }
 
@@ -62,8 +71,7 @@ string decrypt_transposition(string encrypted_text, int width)
         for (int col=0; col < width; col++)
         {
             int index = col * height + row;
-            if (index < encrypted_text.length())
-                decrypted_text += encrypted_text[index];
+            decrypted_text += encrypted_text[index];
 
         }
     }
