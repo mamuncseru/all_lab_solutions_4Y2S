@@ -32,12 +32,10 @@ string ceaser_cipher_encryption(string plain_text, int shift_value)
 
 string ceaser_cipher_decryption(string encrypted_text, int shift_value)
 {
-    string decrypted_text = "";
 
-    int decrypt_key = -shift_value;
+    int decrypt_key = (26 - shift_value) % 26;
     return ceaser_cipher_encryption(encrypted_text, decrypt_key);
 
-    return decrypted_text;
 }
 
 int main()
@@ -56,11 +54,11 @@ int main()
 
     // calling encryption function to encrypt the original text
     encrypted_text = ceaser_cipher_encryption(s, shift_value);
-    cout << "Encrypted text" << encrypted_text << endl;
+    cout << "Encrypted text: " << encrypted_text << endl;
 
     // calling decryption function to decryption the encrypted text
-    decrypted_text = ceaser_cipher_decryption(s, shift_value);
-    cout << decrypted_text << endl;
+    decrypted_text = ceaser_cipher_decryption(encrypted_text, shift_value);
+    cout << "Decrypted text: " << decrypted_text << endl;
 
 
     return 0;
