@@ -3,7 +3,19 @@
 Cipher (i.e. character three to the right modulo 26). 
 Then perform the reverse operation to get original plaintext.
 
+
+Here's how the Caesar cipher works:
+
+Choose a number, known as the "key" or "shift value." This key determines how many positions each letter will be shifted.
+Take your plaintext message and go through each letter.
+Shift each letter by the key value. If the key is positive, you move forward in the alphabet, and if the key is negative, you move backward.
+Wrap around the alphabet if you reach the end. For example, if you reach 'z' and need to shift forward, you wrap around to 'a'.
+The resulting ciphertext is the encrypted message.
+To decrypt the message, you simply apply the opposite shift. If you used a positive key value to encrypt, you would use a negative key value to decrypt, and vice versa.
+
 */
+
+
 
 #include <bits/stdc++.h>
 
