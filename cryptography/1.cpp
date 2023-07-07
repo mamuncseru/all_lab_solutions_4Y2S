@@ -4,14 +4,33 @@ Cipher (i.e. character three to the right modulo 26).
 Then perform the reverse operation to get original plaintext.
 
 
-Here's how the Caesar cipher works:
+The Caesar cipher is a simple substitution cipher that shifts each letter in the plaintext by a fixed number of positions down the alphabet. 
+The provided code implements the encryption and decryption processes of the Caesar cipher.
 
-Choose a number, known as the "key" or "shift value." This key determines how many positions each letter will be shifted.
-Take your plaintext message and go through each letter.
-Shift each letter by the key value. If the key is positive, you move forward in the alphabet, and if the key is negative, you move backward.
-Wrap around the alphabet if you reach the end. For example, if you reach 'z' and need to shift forward, you wrap around to 'a'.
-The resulting ciphertext is the encrypted message.
-To decrypt the message, you simply apply the opposite shift. If you used a positive key value to encrypt, you would use a negative key value to decrypt, and vice versa.
+For encryption:
+1. The user is prompted to enter the original text and the shift value.
+2. The original text is displayed.
+3. The `ceaser_cipher_encryption` function is called with the original text and the shift value as parameters.
+4. Inside the `ceaser_cipher_encryption` function:
+   - Each character in the plain text is checked if it is an alphabetic character.
+   - If it is alphabetic, the character's case (upper or lower) is determined.
+   - The character is then shifted by the given shift value, wrapping around the alphabet if necessary.
+   - The shifted character is added to the encrypted text.
+   - Non-alphabetic characters remain unchanged and are also added to the encrypted text.
+5. The encrypted text is displayed on the console.
+
+For decryption:
+1. The encrypted text and the shift value are already known.
+2. The `ceaser_cipher_decryption` function is called with the encrypted text and the shift value as parameters.
+3. Inside the `ceaser_cipher_decryption` function:
+   - The shift value is converted to the corresponding decryption key.
+   - The `ceaser_cipher_encryption` function is called with the encrypted text and the decryption key as parameters.
+   - The `ceaser_cipher_encryption` function performs the same process as encryption, but with the decryption key.
+4. The decrypted text is displayed on the console.
+
+In summary, the Caesar cipher shifts each letter in the original text by a fixed number of positions to encrypt it. 
+To decrypt the encrypted text, the process is reversed by shifting each letter back by the same number of positions. 
+The provided code allows the user to enter the original text and the shift value, performs encryption and decryption, and displays the results.
 
 */
 
