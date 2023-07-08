@@ -1,16 +1,20 @@
 Experiment No 1. Develop a program to encode and decode a text file with the RLE
 method. Read the data from a file and write the encoded and decoded data in a separate
 file.
+
 Experiment No 2. Develop a program to encode and decode a text file with the LZW
 method. Assume ASCII code is the initial dictionary for the character of the text file.
 Read the data from a file and write the encoded and decoded data in a separate file.
+
 Experiment No 3. Develop a program to encode and decode a string of characters with
 the arithmetic coding method. Generate the probability of the symbol of the string
 automatically. Read the data from a file and write the encoded and decoded data in a
 separate file.
+
 Experiment No 4. Develop a program to encode a string of characters with the Huffman
 coding method. Generate the probability of the symbol of the string automatically. Read
 the data from a file and encode it (i.e. write the symbol table and the codeword of the
 data) in another file. Also, decode the encoded data in a separate file.
+
 Experiment No 5. Develop a program to apply DCT on a gray level image 16X16 and
 plot the transformed image. Then apply IDCT on the transformed image and plot it also.
