@@ -2,7 +2,9 @@
 7. Use the Robin-Miller algorithm to check whether the given number P is prime or not?
 
 
-The Robin-Miller algorithm, also known as the Miller-Rabin primality test, is a probabilistic algorithm used to determine whether a given number is prime or composite. It is an improved version of the Lehmann algorithm and provides a higher probability of correctly identifying prime numbers.
+The Robin-Miller algorithm, also known as the Miller-Rabin primality test, is a probabilistic algorithm used to determine whether a
+ given number is prime or composite. It is an improved version of the Lehmann algorithm and provides a higher probability of 
+ correctly identifying prime numbers.
 
 Here's how the Robin-Miller algorithm works:
 
